@@ -1,3 +1,8 @@
+///Elaborar um programa que calcule e apresente o valor do volume 
+/// de uma caixa retangular, utilizando a fórmula:
+///Volume ← Comprimento * Largura * Altura
+
+
 use std::io;
 
 fn main() {
@@ -31,12 +36,11 @@ fn main() {
         .expect("Failed to read line");
 
     let  comprimento1: i32 = converter_string_para_i32(comprimento);
+
+    let volume = (comprimento1 * largura1) * altura1;
     
-    if largura1 > altura1 {
-        println!( "O volume da caixa é: {}", comprimento1 * largura1 * altura1 )        
-    }else{
-        print!("A largura tem que ser maior que a altura")
-    }
+        println!( "O volume da caixa é: {}", volume );        
+
 
     fn converter_string_para_i32(uma_string: String) -> i32 {
         uma_string

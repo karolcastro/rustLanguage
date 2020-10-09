@@ -39,7 +39,7 @@ fn main() {
 
     let volume = (comprimento1 * largura1) * altura1;
     
-        println!( "O volume da caixa é: {}", volume );        
+        println!( "O volume da caixa é {}m3.", volume );        
 
 
     fn converter_string_para_i32(uma_string: String) -> i32 {

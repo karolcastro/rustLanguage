@@ -45,14 +45,13 @@ fn main() {
     let media = (p1 + p2 + p3) / 3.0;
 
     if media >= 7.0 {
-        println!(" {} Você esta aprovado! Sua média foi {}", media, nome);
+        println!("{} Você esta aprovado! Sua média foi: {}",nome,  media );
     }
     if media >= 5.0 && media < 7.0 {
-        println!(
-            " Você esta de recuperacao! Sua média foi {} {}", media, nome);
+        println!( "{} Você esta de recuperacao! Sua média foi: {}", nome, media);
     }
     if media < 5.0 {
-        println!(" Você não passou! Sua média foi {} {}", media, nome);
+        println!("{} Você não passou! Sua média foi: {}",nome, media);
     }
 
     fn converter_string_para_f32(uma_string: String) -> f32 {

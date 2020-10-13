@@ -14,7 +14,7 @@ fn main() {
     let inteiro1: i32 = converter_string_para_i32(inteiro);
 
     let antecessor = inteiro1 - 1;
-    let sucessor = inteiro1 - 1;
+    let sucessor = inteiro1 + 1;
 
     if inteiro1 > 0 {
         println!("O antecessor a este número é: {}", antecessor);

@@ -21,9 +21,10 @@ fn main() {
 
     let  valor1: f32 = converter_string_para_f32(valor);
 
+    let cotacao_dolar = cotacao1 * valor1;
     
     if valor1 > cotacao1 {
-        println!( "O total em reais é: R$ {}", cotacao1 * valor1 )        
+        println!( "O valor total em reais é de: R$ {}", cotacao_dolar )        
     }else{
         print!("Cotação do dolar (U$) maior que o valor para conversão")
     }

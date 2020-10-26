@@ -1,6 +1,5 @@
-//fn main() {
-//  println!("Hello, world!");
-//};
+//Escrever um programa que receba três números inteiros como entrada 
+//e imprima, como saída, os números em ordem crescente.
 
 use std::io;
 
@@ -32,10 +31,24 @@ fn main() {
 
     let numero3: i32 = converter_string_para_i32(terceiro);
 
-    if numero1 <= numero2 && numero1 <= numero3 {
-        println!("A sequencia é: {:?} {:?} {:?}", numero1, numero2, numero3);
-    } else {
-        print!("Digite uma sequencia válida")
+    
+    if numero1 <= numero2 && numero1 <= numero3 && numero2 <= numero3{
+        println!("A sequencia é: {} {} {}", numero1, numero2, numero3);
+    }
+    if numero1 <= numero2 && numero1 <= numero3 && numero3 <= numero2 {
+        println!("A sequencia é: {} {} {}", numero1, numero3, numero2);
+    }
+    if numero2 <= numero1 && numero2 <= numero3 && numero1 <= numero3 {
+        println!("A sequencia é: {} {} {}", numero2, numero1, numero3);
+    }
+    if numero2 <= numero1 && numero2 <= numero3 && numero3 <= numero1 {
+        println!("A sequencia é: {} {} {}", numero2, numero3, numero1);
+    }
+    if numero3 <= numero1 && numero3 <= numero2 && numero1 <= numero2 {
+        println!("A sequencia é: {} {} {}", numero3, numero1, numero2);
+    }
+    if numero3 <= numero1 && numero3 <= numero2 && numero2 <= numero1 {
+        println!("A sequencia é: {} {} {}", numero3, numero2, numero1);
     }
 
     fn converter_string_para_i32(uma_string: String) -> i32 {

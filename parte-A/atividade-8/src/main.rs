@@ -5,36 +5,35 @@
 /// 
 /// nao deu
 
-use std::io;
+    use std::io;
 
-
-fn main() {
-
-    println!("Escolha um número de 0 a 100 ");
-
-    let mut n = String::new();
-    io::stdin()
-        .read_line(&mut n)
-        .expect("Failed to read line");
-
-    let n1: i32 = converter_string_para_i32(n);
-
-    let fibonacci = n1 + 1;
-
-    if n1 == 0 {
-        println!(" Sequencia de Fibonacci {}", n1);
+    fn main() {
+    
+        let mut fibonacci = String::new();
+        io::stdin()
+            .read_line(&mut fibonacci)
+            .expect("Failed to read line");
+        
+        let fib : f32 = converter_string_para_f32(fibonacci);
+        
+        let n = 3
+    
+        let fibo = fib (n-1) + fib (n-2);
+    
+        if n <= 0 { 
+            println!(" 0 ");
+        
+        }else if n == 1 {
+            println!(" 1 ");
+        }
+        else {
+            println!(" 1 {}",fib )
+        }
+    
+        fn converter_string_para_f32(uma_string: String) -> f32 {
+            uma_string
+                .trim()
+                .parse()
+                .expect("Falha ao converter o valor")
+        }
     }
-    if n1 >= 0  {
-        println!(" Sequencia de Fibonacci {}", fibonacci);
-    }
-    else {
-        println!(" Nao entendi! ");
-    }
-
-    fn converter_string_para_i32(uma_string: String) -> i32 {
-        uma_string
-            .trim()
-            .parse()
-            .expect("Falha ao converter o valor")
-    }
-}

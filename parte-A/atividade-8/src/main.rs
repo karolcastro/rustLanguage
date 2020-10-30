@@ -5,35 +5,14 @@
 /// 
 /// nao deu
 
-    use std::io;
+fn main() {
+    println!("O valor do 13o. elemento da sequência Fibonnaci é: {}", fibonacci(13));
+}
 
-    fn main() {
-    
-        let mut fibonacci = String::new();
-        io::stdin()
-            .read_line(&mut fibonacci)
-            .expect("Failed to read line");
-        
-        let fib : f32 = converter_string_para_f32(fibonacci);
-        
-        let n = 3
-    
-        let fibo = fib (n-1) + fib (n-2);
-    
-        if n <= 0 { 
-            println!(" 0 ");
-        
-        }else if n == 1 {
-            println!(" 1 ");
-        }
-        else {
-            println!(" 1 {}",fib )
-        }
-    
-        fn converter_string_para_f32(uma_string: String) -> f32 {
-            uma_string
-                .trim()
-                .parse()
-                .expect("Falha ao converter o valor")
-        }
+fn fibonacci(contador : i32) -> i32 {
+    if contador <= 1 {
+            return contador;
+    } else {
+        fibonacci(contador - 1) + fibonacci(contador - 2)
     }
+}

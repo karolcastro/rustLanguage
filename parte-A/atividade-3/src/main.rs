@@ -24,7 +24,7 @@ fn main() {
     let adicao = a1 + b1;
     let subtracao = a1 - b1;
 
-    if a1 >= b1 || a1 == b1 || a1 <= b1 {
+    if a1 >= b1 || a1 == b1 || a1 <= b1 {np
         println!(" Divisão de A e B é: {}", divisao);
         println!(" Multiplicao de A e B é: {}", multiplicacao);
         println!(" Adição de A e B é: {}", adicao);

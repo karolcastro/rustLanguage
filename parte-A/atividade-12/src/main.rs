@@ -12,7 +12,7 @@ fn main() {
     .read_line(&mut a)
     .expect("Falha ao ler o valor");
 
-    let numeroA: i32 = converter_string_para_i32(a);
+    let numero_a: i32 = converter_string_para_i32(a);
 
     println!("Informe o número B: ");
 
@@ -22,7 +22,7 @@ fn main() {
     .read_line(&mut b)
     .expect("Falha ao ler o valor");
 
-    let numeroB: i32 = converter_string_para_i32(b);
+    let numero_b: i32 = converter_string_para_i32(b);
 
 
     println!("Informe o número C: ");
@@ -33,7 +33,7 @@ fn main() {
     .read_line(&mut c)
     .expect("Falha ao ler o valor");
 
-    let numeroC: i32 = converter_string_para_i32(c);
+    let numero_c: i32 = converter_string_para_i32(c);
 
     println!("Informe o número D: ");
 
@@ -43,11 +43,11 @@ fn main() {
     .read_line(&mut d)
     .expect("Falha ao ler o valor");
 
-    let numeroD: i32 = converter_string_para_i32(d);
+    let numero_d: i32 = converter_string_para_i32(d);
 
-    let soma = ((numeroA + numeroB) + numeroC) + numeroD;
+    let soma = ((numero_a + numero_b) + numero_c) + numero_d;
 
-    if soma <= 100 {
+    if soma >= 100 {
         println!("A soma dos números foi: {}", soma);
     } else {
         println!("A soma dos números foi maior que 100 ");

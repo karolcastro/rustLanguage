@@ -10,7 +10,7 @@ fn main() {
         if numero >= 200{
             break ;
         }
-        print!(" {} ", numero);
+        println!(" {} ", numero);
         numero +=4;
     }
 }

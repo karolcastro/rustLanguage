@@ -3,9 +3,10 @@
 
 fn main() {
    
+    
     for numero in 0..21 {
         if numero % 2 == 1 {
-            print!(" {} ", numero);
+            println!(" {} ", numero);
         }
     }
 }

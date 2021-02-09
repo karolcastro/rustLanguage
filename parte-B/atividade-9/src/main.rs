@@ -19,14 +19,13 @@ fn main() {
         } 
     }
 
-    //calcular maior
+    
     for i in temp1.iter(){
         if i > &maior_temperatura {
             maior_temperatura = *i;
         } 
     }
    
-    //calcular a média
     for i in temp1.iter(){
         contador = contador + i;
     }

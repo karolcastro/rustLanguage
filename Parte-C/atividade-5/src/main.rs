@@ -20,7 +20,8 @@ fn main() {
            let  numero1: i32 = converter_string_para_i32(numero);
 
             a[i][j] = numero1;
-            if numero1 % a[i][j] == 1 {
+            if numero1 % a[i][j] == 1 { //TODO
+
             }
         }
         

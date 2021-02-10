@@ -29,16 +29,12 @@ println!("Matriz A: {:?}", a);
 
 for i in 0..linha_b {
    for j in 0..coluna_b {
-       println!("Digite um número para B");
-       let mut numero =  String::new();
-
-       io::stdin()
-      .read_line(&mut numero)
-      .expect("Failed to read line");
-
-      let  numero2: i32 = converter_string_para_i32(numero);
-       b[i][j] = numero2;
-       b[i][j] = a[i][j]*2; //TODO
+       if i == j {
+           b[i][j] = a[i][j] * 3;
+       }
+       else {
+        b[i][j] = a[i][j] * 2;
+       }
    }
    
 }

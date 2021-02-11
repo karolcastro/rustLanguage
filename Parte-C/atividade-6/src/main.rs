@@ -20,14 +20,17 @@ fn main() {
     
            let  numero1: i32 = converter_string_para_i32(numero);
 
-            a[i][j] = numero1;
-            if numero1 % a[i][j] == 1 { //TODO
-                println!("Matriz A: {:?}", numero1);
+            if i % 2 == 0 && j % 2 == 0 { 
+                a[i][j] = numero1;
+                // println!("Elementos pares são: {:?}", a.len());
+            }
+            else {
+                // println!("Elementos ímpares são: {:?}", a);
             }
         }
-        println!("Matriz A: {:?}", numero1);
-        // println!("Matriz A: {:?}", a);
     }
+    println!("Elementos pares são: {:?}", a.len());
+    println!("Elementos ímpares são: {:?}", a);
     
     fn converter_string_para_i32(uma_string: String) -> i32 {
        uma_string

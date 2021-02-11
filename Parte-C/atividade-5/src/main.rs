@@ -18,8 +18,6 @@ fn main() {
            .expect("Failed to read line");
     
            let  numero1: i32 = converter_string_para_i32(numero);
-
-            a[i][j] = numero1;
             
             if i % 2 == 1 && j % 2 == 1 { 
             a[i][j] = numero1;

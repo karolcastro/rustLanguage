@@ -20,13 +20,14 @@ fn main() {
     
            let  numero1: i32 = converter_string_para_i32(numero);
 
+           if i == j {
             a[i][j] = numero1;
-            a[i][j] = a[i][j] +1; //TODO
+            a[i][j] =  a[i][j] + numero1;
+        }
+        
         }
     }
     println!("Matriz A: {:?}", a);
-    
-    
     
     fn converter_string_para_i32(uma_string: String) -> i32 {
        uma_string

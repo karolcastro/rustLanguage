@@ -20,14 +20,15 @@ fn main() {
            let  numero1: i32 = converter_string_para_i32(numero);
 
             a[i][j] = numero1;
-            if numero1 % a[i][j] == 1 { //TODO
-
+            
+            if i % 2 == 1 && j % 2 == 1 { 
+            a[i][j] = numero1;
+            a[i][j] =  a[i][j] + numero1;
             }
         }
-        
-        println!("Matriz A: {:?}", a);
     }
-    
+    println!("Matriz A: {:?}", a);
+
     fn converter_string_para_i32(uma_string: String) -> i32 {
        uma_string
            .trim()

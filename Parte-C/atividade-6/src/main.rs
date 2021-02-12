@@ -20,8 +20,8 @@ fn main() {
     
            let  numero1: i32 = converter_string_para_i32(numero);
 
-            if i % 2 == 0 && j % 2 == 0 { 
-                a[i][j] = numero1;
+            if i == j { 
+                a[i][j] = numero1 + numero1;
                 // println!("Elementos pares são: {:?}", a.len());
             }
             else {

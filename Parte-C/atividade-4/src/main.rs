@@ -22,7 +22,7 @@ fn main() {
 
            if i == j {
             a[i][j] = numero1;
-            a[i][j] =  a[i][j] + numero1;
+            a[i][j] =  numero1.iter().sum();
         }
         
         }

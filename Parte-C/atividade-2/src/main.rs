@@ -3,21 +3,24 @@
 use std::io;
 fn main() {
 
-let coluna_a = 5;
-let linha_a = 5;
-let coluna_b = 5;
-let linha_b = 5;
-let coluna_c = 5;
+// let coluna_a = 2;
+// let linha_a = 5;
+// let coluna_b = 2;
+// let linha_b = 5;
+let coluna_c = 2;
 let linha_c = 5;
 
-
-let mut a = vec![vec![0; coluna_a]; linha_a];
-let mut b = vec![vec![0; coluna_b]; linha_b];
+let mut contador = 0;
+let mut a = [0;5];
+let mut b = [0;5];
 let mut c = vec![vec![0; coluna_c]; linha_c];
     
-for i in 0..linha_a {
-    for j in 0..coluna_a {
-        println!("Digite um número");
+// for i in 0..linha_a {
+//     for j in 0..coluna_a {
+
+    while contador < 5 {
+
+        println!("Digite um número para A");
         let mut numero =  String::new();
 
         io::stdin()
@@ -25,14 +28,19 @@ for i in 0..linha_a {
        .expect("Failed to read line");
 
        let  numero1: i32 = converter_string_para_i32(numero);
-        a[i][j] = numero1;
+        a[contador] = numero1;
+        contador += 1;
     }
-}
-println!("Matriz A: {:?}", a);
 
-for i in 0..linha_b {
-   for j in 0..coluna_b {
-       println!("Digite um número");
+println!("Vetor A: {:?}", a);
+
+contador = 0;
+// for i in 0..linha_b {
+//    for j in 0..coluna_b {
+
+    while contador < 5 {
+
+       println!("Digite um número para B");
        let mut numero =  String::new();
 
        io::stdin()
@@ -40,18 +48,19 @@ for i in 0..linha_b {
       .expect("Failed to read line");
 
       let  numero2: i32 = converter_string_para_i32(numero);
-       b[i][j] = numero2;
+       b[contador] = numero2;
+       contador += 1;
    }
    
-}
-println!("Matriz B: {:?}", b);
+println!("Vetor B: {:?}", b);
 
 for i in 0..linha_c {
-   for j in 0..coluna_c {
-       c[j][0] = a[i][j]*2;
-       c[j][1] = b[i][j]-5;
-   }
+        
+        c[i][0] = a[i] * 2;
+        c[i][1] = b[i] - 5;
 }
+    
+
 println!("A matriz C é : {:?}", c);
 
 fn converter_string_para_i32(uma_string: String) -> i32 {

@@ -6,6 +6,7 @@ fn main() {
     
     let coluna_a = 5;
     let linha_a = 5;
+    let mut soma = 0;
     
     let mut a = vec![vec![0; coluna_a]; linha_a];
         
@@ -19,15 +20,18 @@ fn main() {
            .expect("Failed to read line");
     
            let  numero1: i32 = converter_string_para_i32(numero);
+           a[i][j] = numero1;
 
            if i == j {
-            a[i][j] = numero1;
-            a[i][j] =  numero1.iter().sum();
+            // a[i][j] = numero1;
+            // a[i][j] = a[i][j] + numero1;
+            soma += numero1;
         }
         
         }
     }
     println!("Matriz A: {:?}", a);
+    println!("Soma : {:?}", soma);
     
     fn converter_string_para_i32(uma_string: String) -> i32 {
        uma_string

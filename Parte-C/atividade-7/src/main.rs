@@ -24,29 +24,34 @@ for i in 0..linha_a {
        .read_line(&mut numero)
        .expect("Failed to read line");
 
-       let  numero1: i32 = converter_string_para_i32(numero);
+       let mut numero1: i32 = converter_string_para_i32(numero);
 
-        if i % 3 == 0 && j % 4 == 0{
+        if a[i][j] % 3 == 0 && a[i][j] % 4 == 0 {
             a[i][j] = numero1;
+        }else{
+            a[i][j]= 0;
         }
+        
     }
 }
 println!("Matriz A: {:?}", a);
 
 for i in 0..linha_b {
    for j in 0..coluna_b {
-    println!("Digite um número");
+    println!("Digite um número para B");
     let mut numero =  String::new();
 
     io::stdin()
    .read_line(&mut numero)
    .expect("Failed to read line");
 
-   let  numero2: i32 = converter_string_para_i32(numero);
+   let mut numero2: i32 = converter_string_para_i32(numero);
     
-   b[i][j] = numero2;
-    if i % 5 == 0 && j % 6 == 0 {
+//    b[i][j] = numero2;
+    if b[i][j] % 5 == 0 && b[i][j] % 6 == 0 {
         b[i][j] = numero2;
+       }else{
+        b[i][j] = 0;
        }
    }
 }

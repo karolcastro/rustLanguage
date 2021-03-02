@@ -25,22 +25,36 @@ fn main() {
         }
     }
 
-    let mut total_pares = 0;
-    let mut total_impares = 0;
+    let mut total_pares = 0.0;
+    let mut total_impares = 0.0;
     let mut percent_pares = 0.0;
     let mut percent_impar = 0.0;
+    let mut percent = 100.0;
 
     for i in 0..linha_a {
         for j in 0..coluna_a {
             // separa os elementos pares
             if a[i][j] % 2 == 0 {
-                 total_pares += 1;
+                 total_pares += 1.0;
             }
             else {
-                total_impares += 1;
+                total_impares += 1.0;
             }
         }
     }
+
+    for i in 0..linha_a {
+        for j in 0..coluna_a {
+            // separa os elementos pares
+            if a[i][j] % 2 == 0 {
+                 percent_pares = total_pares / 100.0;
+            }
+            else {
+                percent_impar = total_impares / 100.0;
+            }
+        }
+    }
+
     println!("Matriz A: {:?}", a);
     println!("Total Impar : {:?}", total_impares);
     println!("Total Par : {:?}", total_pares);
